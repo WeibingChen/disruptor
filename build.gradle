@@ -55,6 +55,8 @@ dependencies {
     checkstyle 'com.puppycrawl.tools:checkstyle:8.12'
     testCompile 'junit:junit:4.12'
     perfCompile 'org.hdrhistogram:HdrHistogram:2.1.10'
+    // https://mvnrepository.com/artifact/org.openjdk.jol/jol-core
+    compile group: 'org.openjdk.jol', name: 'jol-core', version: '0.14'
 }
 
 idea.module {
@@ -62,8 +64,8 @@ idea.module {
     scopes.TEST.plus += [ configurations.perfCompile ]
 }
 
-sourceCompatibility = 1.7
-targetCompatibility = 1.7
+sourceCompatibility = 1.8
+targetCompatibility = 1.8
 
 
 compileJava {
